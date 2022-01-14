@@ -14,7 +14,7 @@ def getpass():
     return  passw
 
 def hack(a,passw):
-    with pyzipper.AESZipFile('8303.zip', 'r', compression=pyzipper.ZIP_LZMA, encryption=pyzipper.WZ_AES) as f:
+    with pyzipper.AESZipFile('8303.zip', 'r', compression=pyzipper.ZIP_LZMA, encryption=pyzipper.WZ_AES) as f:  #8303.zip改成你的zip名
         f.pwd = passw[a].encode('utf-8')
         try:
             f.extractall()
